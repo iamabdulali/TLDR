@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link } from "react-router-dom";
 
 export default function (props) {
 
@@ -36,9 +37,7 @@ export default function (props) {
               />
             </div>
             <div className="d-grid gap-2 mt-3">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+              <Link to="/home"><button className="btn btn-primary"> Login </button></Link>
             </div>
             <p className="text-center mt-2">
               Forgot <a href="#">password?</a>
