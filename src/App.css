@@ -70,6 +70,24 @@
   font-weight: 800;
 }
 
+/* LOGO STUFF */
+
+#logo {
+  display: inline-block;
+  padding-right: 50vw;
+}
+
+.homepage_navbar {
+  background-color: #B0AC8F;
+  
+}
+
+.homepage_navbar ul , li {
+  display: inline;
+  text-decoration: none;
+  list-style-type: none;
+}
+
 label {
   font-size: 14px;
   font-weight: 600;
