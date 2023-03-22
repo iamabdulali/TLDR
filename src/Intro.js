@@ -1,10 +1,8 @@
 import React from 'react';
-import Sunrise from 'components./Sunrise';
-
+// import Sunrise from './components/Sunrise.js';
 const Intro = () => {
   return (
     <div>
-      <Sunrise />
       <p>Loading...</p>
     </div>
   );
