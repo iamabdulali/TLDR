@@ -8,8 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 // setting up paths 
-import Auth from './Auth.js';
-import Home from './Home.js';
+import Auth from './/pages/Auth.js';
+import Home from './/pages/Home.js';
 
 
 
