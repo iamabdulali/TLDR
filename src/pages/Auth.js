@@ -44,6 +44,7 @@ export default function (props) {
             </p>
           </div>
         </form>
+        <div id="cursor" className="Cursor"></div>
       </div>
     )
   }
@@ -79,6 +80,7 @@ export default function (props) {
           </p>
         </div>
       </form>
+      <div id="cursor" className="Cursor"></div>
     </div>
   )
 }
