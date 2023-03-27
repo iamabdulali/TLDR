@@ -1,33 +1,61 @@
-import React from "react";
-import ThemeProvider from "../components/Themeprovider.js";
-import ThemeSwitcher from "../components/Themeswitcher.js";
+import React, {useState} from "react";
+import { ReactComponent as AddIcon } from "../components/add.svg";
+import { ReactComponent as DarkIcon } from "../components/dark.svg";
+import { ReactComponent as ProfileIcon } from "../components/profile.svg";
+import { ReactComponent as SettingsIcon } from "../components/settings.svg";
+import logo from "../components/whitelogo.png";
 
-const Home = () => {
+export default function (props) {
+
   return (
-    <ThemeProvider>
-      <div className="homepage_wrapper">
-        <div className="homepage_navbar navbar navbar-expand-lg">
-          <nav>
-            <ul>
-              <li>
-                <img src={process.env.PUBLIC_URL + '/images/blacklogo.png'} alt="logo" style={{ width: '100px', height: '100px', filter: 'brightness(0.5)' }} />
-              </li>
-              <li>
-                <ThemeSwitcher />
-              </li>
-              <li>
-                <a href="#">ADD</a>
-              </li>
-              <li>
-                <a href="#">PFP/SETTINGS</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <p> Hello world! </p>
-      </div>
-    </ThemeProvider>
+    <Navbar>
+      <img src={logo} alt="logo" className="logo" />
+      <NavItem icon={<AddIcon />}></NavItem>
+      <NavItem icon={<DarkIcon />}></NavItem>
+      <NavItem icon={<ProfileIcon />}>
+        <Dropdown />
+      </NavItem>
+    </Navbar>
   );
 };
 
-export default Home;
+function Navbar(props) {
+  return (
+    <nav className="navbar">
+      <ul className="navbar-nav">{ props.children }</ul>
+    </nav>
+  );
+}
+
+function NavItem(props) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <li className="nav-item">
+      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+        { props.icon }
+      </a>
+
+      { open && props.children }
+    </li>
+  );
+}
+
+function Dropdown() {
+  function DropdownItem(props) {
+    return (
+      <a href="#" className="menu-item">
+        <span className="icon-button">{ props.icon }</span>
+        { props.children }
+      </a>
+    )
+  }
+
+  return (
+    <div className="dropdown">
+      <DropdownItem icon={<SettingsIcon />}>
+        <h1 className="settings">Settings</h1>
+      </DropdownItem>
+    </div>
+  );
+}
