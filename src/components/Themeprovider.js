@@ -1,12 +1,17 @@
 import React, { createContext, useState } from "react";
 
+import lightLogo from "./whitelogo.png";
+import darkLogo from "./blacklogo.png";
+
 export const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
+  const [logo, setLogo] = useState(lightLogo); // move inside component
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
+    setLogo(theme === 'light' ? darkLogo : lightLogo);
   };
 
   const themeStyles = {

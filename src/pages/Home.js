@@ -10,7 +10,7 @@ const Home = () => {
           <nav>
             <ul>
               <li>
-                <p id="logo">TL;DR</p>
+                <img src={process.env.PUBLIC_URL + '/images/blacklogo.png'} alt="logo" style={{ width: '100px', height: '100px', filter: 'brightness(0.5)' }} />
               </li>
               <li>
                 <ThemeSwitcher />
