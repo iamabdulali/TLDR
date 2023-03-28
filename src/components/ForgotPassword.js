@@ -14,7 +14,8 @@ export default function ForgotPassword() {
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Forgot Password</h3>
+          <h3 className="Auth-form-title">Forgot your password?</h3>
+          <h1 className="Auth-form-subtitle"> You should be more careful...kidding!</h1>
           <div className="form-group mt-3">
             <label>Email address</label>
             <input

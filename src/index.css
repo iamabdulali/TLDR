@@ -13,7 +13,7 @@ code {
 }
 
 :root {
-  --bg:  #B0AC8F;
+  --bg:  #33677D;
   --bg-accent: #484a4d;
   --text-color: #000000;
   --nav-size: 60px;
@@ -99,13 +99,13 @@ a {
 }
 
 .menu-item:hover {
-  background-color: #FAF7EE;
+  background-color: #ffffff;
 }
 
 .logo {
   flex: 1;
   font-family: 'Red Hat Display', sans-serif;
-  color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
 }
@@ -114,5 +114,5 @@ a {
   font-family: 'Red Hat Display', sans-serif;
   font-size: 18px;
   margin-left: 8px;
-  color: #000000;
+  color: #ffffff;
 }

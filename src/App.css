@@ -1,3 +1,18 @@
+.dark-mode body{
+  background-color: #333;
+  color: #fff;
+}
+
+.light-mode body{
+  background-color: #fff;
+  color: #333;
+}
+
+body {
+
+}
+
+
 .App {
   text-align: center;
 }
@@ -79,45 +94,74 @@
 }
 
 /* LOGIN PAGE */
-
 .Auth-form-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100vw;
+  justify-content: center;
   height: 100vh;
+  background-color: #f8f9fa;
 }
 
 .Auth-form {
-  width: 50vw;;
-  border-radius: 30px;
-  border-style: ridge 10px;
-  padding: 12px 20px;
-  margin: 10px 0;
-  border: none;
-  background: #F7F7F7;
-  font-size: 16px;
-}
-
-.submit {
-  border-radius: 30px;
-  padding: 12px 20px;
-  margin-top: 20px;
-  font-size: 16px;
-  border: none;
-}
-
-.Auth-form-content {
-  padding-left: 12%;
-  padding-right: 12%;
+  width: 450px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .Auth-form-title {
-  text-align: center;
-  margin-bottom: 1em;
-  font-size: 24px;
-  color: rgb(34, 34, 34);
-  font-weight: 800;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.Auth-form-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.link-primary {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-primary:hover {
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-size: 16px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 .btn {
@@ -186,6 +230,16 @@
     height: 200%;
     opacity: 0;
   }
+}
+
+.text-center {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
