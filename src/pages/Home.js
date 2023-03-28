@@ -3,13 +3,12 @@ import { ReactComponent as AddIcon } from "../components/add.svg";
 import { ReactComponent as DarkIcon } from "../components/dark.svg";
 import { ReactComponent as ProfileIcon } from "../components/profile.svg";
 import { ReactComponent as SettingsIcon } from "../components/settings.svg";
-import logo from "../components/whitelogo.png";
 
 export default function (props) {
 
   return (
     <Navbar>
-      <img src={logo} alt="logo" className="logo" />
+      <h1 className="logo">TLDR</h1>
       <NavItem icon={<AddIcon />}></NavItem>
       <NavItem icon={<DarkIcon />}></NavItem>
       <NavItem icon={<ProfileIcon />}>
@@ -17,7 +16,7 @@ export default function (props) {
       </NavItem>
     </Navbar>
   );
-};
+}
 
 function Navbar(props) {
   return (
@@ -54,7 +53,7 @@ function Dropdown() {
   return (
     <div className="dropdown">
       <DropdownItem icon={<SettingsIcon />}>
-        <h1 className="settings">Settings</h1>
+        <h1 className="signout">Sign Out</h1>
       </DropdownItem>
     </div>
   );
