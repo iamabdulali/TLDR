@@ -21,26 +21,52 @@ export default function (props) {
     localStorage.setItem("dark-mode", newIsDarkMode);
   };
 
+  const [addMenuOpen, setAddMenuOpen] = useState(false);
+  const [items, setItems] = useState([]);
+
+  const handleAddClick = () => {
+    setAddMenuOpen(!addMenuOpen);
+  };
+
+  const handleAddItem = (itemName) => {
+    setItems([...items, itemName]);
+  };
+
   return (
-    <Navbar>
-      <h1 className="logo">TLDR</h1>
-      <NavItem icon={<AddIcon />}></NavItem>
-      <NavItem
-        icon={isDarkMode ? <LightIcon /> : <DarkIcon />}
-        onClick={handleToggleTheme}
-      ></NavItem>
-      <NavItem icon={<ProfileIcon />}>
-        <Dropdown />
-      </NavItem>
-    </Navbar>
+    <div>
+      <Navbar>
+        <h1 className="logo">TLDR</h1>
+        <NavItem icon={<AddIcon />} onClick={handleAddClick}>
+          {addMenuOpen && (
+            <Dropdown>
+              <DropdownItem icon={<AddIcon />} onClick={() => handleAddItem('square')}>
+                Add Square
+              </DropdownItem>
+            </Dropdown>
+          )}
+        </NavItem>
+        <NavItem
+          icon={isDarkMode ? <LightIcon /> : <DarkIcon />}
+          onClick={handleToggleTheme}
+        ></NavItem>
+        <NavItem icon={<ProfileIcon />}>
+          <Dropdown>
+            <DropdownItem icon={<ProfileIcon />}>Profile</DropdownItem>
+            <DropdownItem icon={<SettingsIcon />}>Settings</DropdownItem>
+          </Dropdown>
+        </NavItem>
+      </Navbar>
+      <Home items={items} />
+    </div>
   );
 }
 
 function Home(props) {
-  return (
-    <div className="body">
-    </div>
-  );
+  return <div className="body">{props.items.map((item, index) => <Square key={index} />)}</div>;
+}
+
+function Square() {
+  return <div className="square"></div>;
 }
 
 function Navbar(props) {
@@ -72,19 +98,15 @@ function NavItem(props) {
   );
 }
 
-function Dropdown() {
-  function DropdownItem(props) {
-    return (
-      <a href="#" className="menu-item">
-        <span className="icon-button">{props.icon}</span>
-        {props.children}
-      </a>
-    );
-  }
+function Dropdown(props) {
+  return <div className="dropdown">{props.children}</div>;
+}
 
+function DropdownItem(props) {
   return (
-    <div className="dropdown">
-        <h1 className="signout">Sign Out</h1>
-    </div>
+    <a href="#" className="menu-item" onClick={props.onClick}>
+      <span className="icon-button">{props.icon}</span>
+      {props.children}
+    </a>
   );
 }
