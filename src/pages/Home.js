@@ -4,6 +4,9 @@ import { ReactComponent as DarkIcon } from "../components/dark.svg";
 import { ReactComponent as LightIcon } from "../components/light.svg";
 import { ReactComponent as ProfileIcon } from "../components/profile.svg";
 import { ReactComponent as SettingsIcon } from "../components/settings.svg";
+import { ReactComponent as SportsIcon } from "../components/sports.svg";
+import { ReactComponent as TrafficIcon } from "../components/traffic.svg";
+import { ReactComponent as WeatherIcon } from "../components/weather.svg";
 
 export default function (props) {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -39,9 +42,9 @@ export default function (props) {
         <NavItem icon={<AddIcon />} onClick={handleAddClick}>
           {addMenuOpen && (
             <Dropdown>
-              <DropdownItem icon={<AddIcon />} onClick={() => handleAddItem('square')}>
-                Add Square
-              </DropdownItem>
+              <DropdownItem icon={<SportsIcon />} onClick={() => handleAddItem('square')}>Sports</DropdownItem>
+              <DropdownItem icon={<TrafficIcon />} onClick={() => handleAddItem('square')}>Traffic</DropdownItem>
+              <DropdownItem icon={<WeatherIcon />} onClick={() => handleAddItem('square')}>Weather</DropdownItem>
             </Dropdown>
           )}
         </NavItem>

@@ -14,7 +14,7 @@ code {
 
 :root {
   --bg:  #33677D;
-  --bg-accent: #484a4d;
+  --bg-accent: #FAF7EE;
   --text-color: #000000;
   --nav-size: 60px;
   --border: 1px solid #474a4d;
@@ -61,6 +61,7 @@ a {
   border-radius: 50%;
   padding: 5px;
   margin: 2px;
+  margin-right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +83,7 @@ a {
   top: 65px;
   width: 150px;
   transform: translateX(-38%);
-  background-color: var(--bg);
+  background-color: var(--bg-accent);
   border: var(--border);
   border-radius: var(--border-radius);
   padding: 0rem;
@@ -108,11 +109,4 @@ a {
   color: #ffffff;
   display: flex;
   align-items: center;
-}
-
-.signout {
-  font-family: 'Red Hat Display', sans-serif;
-  font-size: 18px;
-  margin-left: 8px;
-  color: #ffffff;
 }
