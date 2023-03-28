@@ -3,10 +3,12 @@ import { ReactComponent as AddIcon } from "../components/add.svg";
 import { ReactComponent as DarkIcon } from "../components/dark.svg";
 import { ReactComponent as ProfileIcon } from "../components/profile.svg";
 import { ReactComponent as SettingsIcon } from "../components/settings.svg";
+import WidgetPopup from "./WidgetPopup";
 
 export default function (props) {
 
   return (
+    <div>
     <Navbar>
       <h1 className="logo">TLDR</h1>
       <NavItem icon={<AddIcon />}></NavItem>
@@ -15,6 +17,9 @@ export default function (props) {
         <Dropdown />
       </NavItem>
     </Navbar>
+    <div className='widget-container'></div>
+
+    </div>
   );
 }
 
@@ -35,7 +40,11 @@ function NavItem(props) {
         { props.icon }
       </a>
 
-      { open && props.children }
+      { open && (
+        <div className="popup">
+          <WidgetPopup />
+        </div>
+      ) }
     </li>
   );
 }
