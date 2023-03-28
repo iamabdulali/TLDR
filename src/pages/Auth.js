@@ -1,5 +1,9 @@
+
 import React, {useState} from "react";
 import {Link } from "react-router-dom";
+
+import '../App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function (props) {
 
@@ -53,7 +57,7 @@ export default function (props) {
     <div className="Auth-form-container">
       <form className="Auth-form">
         <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign In</h3>
+          <h3 className="Auth-form-title">Sign Up!</h3>
           <div className="form-group mt-3">
             <label>Email address</label>
             <input
