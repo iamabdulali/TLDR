@@ -40,8 +40,8 @@ export default function (props) {
               <Link to="/home"><button className="btn btn-primary"> Login </button></Link>
             </div>
             <p className="text-center mt-2">
-              Forgot <a href="#">password?</a>
-            </p>
+              Forgot <Link to="/forgot-password">password?</Link>
+              </p>
           </div>
         </form>
         <div id="cursor" className="Cursor"></div>
@@ -75,9 +75,9 @@ export default function (props) {
               Submit
             </button>
           </div>
-          <p className="forgot-password text-right mt-2">
-            Forgot <a href="#">password?</a>
-          </p>
+          <p className="text-center mt-2">
+            Forgot <Link to="/forgot-password">password?</Link>
+            </p>
         </div>
       </form>
       <div id="cursor" className="Cursor"></div>
